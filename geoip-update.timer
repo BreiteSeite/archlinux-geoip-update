@@ -1,0 +1,4 @@
+[Timer]
+OnUnitInactiveSec=1w
+OnStartupSec=1h
+AccuracySec=1h

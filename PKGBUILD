@@ -6,6 +6,7 @@ pkgrel=1
 pkgdesc='Updates GeoIP files via systemd.timer'
 arch=('any')
 license=('MIT')
+depends=('systemd' 'geoip' 'wget' 'gzip')
 source=(geoip-update.service
         geoip-update.timer
         LICENSE)

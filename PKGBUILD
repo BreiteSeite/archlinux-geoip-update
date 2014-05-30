@@ -12,7 +12,7 @@ source=(geoip-update.service
         geoip-update.timer
         LICENSE)
 md5sums=('3c327feed1dd30316255ce1b012db0aa'
-         'f91c706b7fef8fcdbce91d5f389c4e8b'
+         '729840d189aa92f63d69f626b984125d'
 	 '18a016a3a0cef884a3fab3203a9dcae3')
 
 package() {

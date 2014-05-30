@@ -5,6 +5,7 @@ pkgver=1.0
 pkgrel=1
 pkgdesc='Updates GeoIP files via systemd.timer'
 arch=('any')
+url='https://github.com/BreiteSeite/archlinux-geoip-update'
 license=('MIT')
 depends=('systemd' 'geoip' 'wget' 'gzip')
 source=(geoip-update.service

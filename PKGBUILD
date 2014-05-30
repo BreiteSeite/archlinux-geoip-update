@@ -18,10 +18,13 @@ md5sums=('3c327feed1dd30316255ce1b012db0aa'
 package() {
     cd "${srcdir}"
 
-    install -d -m755 "${pkgdir}"/lib/systemd/system/
-    install -D -m644 geoip-update.service "${pkgdir}"/lib/systemd/system/geoip-update.service
-    install -D -m644 geoip-update.timer "${pkgdir}"/lib/systemd/system/geoip-update.timer
+    install -d -m755 "${pkgdir}"/usr/lib/systemd/system/
+    install -D -m644 geoip-update.service "${pkgdir}"/usr/lib/systemd/system/geoip-update.service
+    install -D -m644 geoip-update.timer "${pkgdir}"/usr/lib/systemd/system/geoip-update.timer
     
+    install -d -m755 "${pkgdir}"/usr/lib/systemd/system/timers.target
+    ln -s ../geoip-update.timer "${pkgdir}"/usr/lib/systemd/system/timers.target/geoip-update.timer
+ 
     install -d -m755 "${pkgdir}"/usr/share/licenses/
     install -D -m644 LICENSE "${pkgdir}"/usr/share/licenses/${pkgname}
 }

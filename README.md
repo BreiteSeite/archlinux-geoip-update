@@ -7,5 +7,7 @@ Install (using cower)
 ---------------------
 
 `cower -d geoip-update-systemd`
+
 `cd geoip-update-systemd`
+
 `makepkg -si`

@@ -7,16 +7,18 @@ pkgdesc='Updates GeoIP files via systemd.timer'
 arch=('any')
 url='https://github.com/BreiteSeite/archlinux-geoip-update'
 license=('MIT')
-depends=('systemd' 'geoip' 'wget' 'gzip')
+depends=('systemd' 'wget' 'gzip')
 source=(geoip-update.service
         geoip-update.timer
         LICENSE)
-md5sums=('3c327feed1dd30316255ce1b012db0aa'
+md5sums=('66891e09735bad30e0b1cfb3a51dd22e'
          '729840d189aa92f63d69f626b984125d'
 	 '18a016a3a0cef884a3fab3203a9dcae3')
 
 package() {
     cd "${srcdir}"
+
+    install -d -m755 "${pkgdir}"/usr/share/GeoIP/
 
     install -d -m755 "${pkgdir}"/usr/lib/systemd/system/
     install -D -m644 geoip-update.service "${pkgdir}"/usr/lib/systemd/system/geoip-update.service

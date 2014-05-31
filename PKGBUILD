@@ -2,7 +2,7 @@
 
 pkgname=geoip-update-systemd
 pkgver=1.4
-pkgrel=1
+pkgrel=2
 pkgdesc='Updates GeoIP files via systemd.timer'
 arch=('any')
 url='https://github.com/BreiteSeite/archlinux-geoip-update'

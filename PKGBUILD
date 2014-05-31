@@ -1,7 +1,7 @@
 # Maintainer: Michael Kühn <breiteseite1337@gmail.com>
 
 pkgname=geoip-update-systemd
-pkgver=1.2
+pkgver=1.3
 pkgrel=1
 pkgdesc='Updates GeoIP files via systemd.timer'
 arch=('any')
@@ -22,8 +22,8 @@ package() {
     install -D -m644 geoip-update.service "${pkgdir}"/usr/lib/systemd/system/geoip-update.service
     install -D -m644 geoip-update.timer "${pkgdir}"/usr/lib/systemd/system/geoip-update.timer
     
-    install -d -m755 "${pkgdir}"/usr/lib/systemd/system/timers.target
-    ln -s ../geoip-update.timer "${pkgdir}"/usr/lib/systemd/system/timers.target/geoip-update.timer
+    install -d -m755 "${pkgdir}"/usr/lib/systemd/system/timers.target.wants
+    ln -s ../geoip-update.timer "${pkgdir}"/usr/lib/systemd/system/timers.target.wants/geoip-update.timer
  
     install -d -m755 "${pkgdir}"/usr/share/licenses/
     install -D -m644 LICENSE "${pkgdir}"/usr/share/licenses/${pkgname}

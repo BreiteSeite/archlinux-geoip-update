@@ -1,7 +1,7 @@
 # Maintainer: Michael Kühn <breiteseite1337@gmail.com>
 
 pkgname=geoip-update-systemd
-pkgver=1.3
+pkgver=1.4
 pkgrel=1
 pkgdesc='Updates GeoIP files via systemd.timer'
 arch=('any')
